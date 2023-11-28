@@ -18,11 +18,22 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header>Rock Paper Scissors Lizard Spock</header>
-
+    <div class="container">
+        <!-- Header -->
+        <header>Rock Paper Scissors Lizard Spock</header>
+    </div>
+    
     <!-- Main Content -->
-    <main>main content</main>
+    <main>
+        <div id="game">
+            <button id="btnrock" onclick="playerChoice('rock')">Rock</button>
+            <button id="btnpaper" onclick="playerChoice('paper')">Paper</button>
+            <button id="btnscissors" onclick="playerChoice('scissors')">Scissors</button>
+            <button id="btnlizard" onclick="playerChoice('lizard')">Lizard</button>
+            <button id="btnspock" onclick="playerChoice('spock')">Spock</button>
+          </div>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer>footer</footer>
