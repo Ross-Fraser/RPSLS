@@ -29,6 +29,23 @@ main {
     flex: 1 0 auto;
 }   
 
+/* Buttons */
+button {
+    background-color: peachpuff;
+    border: none;
+    color: black;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    /* Button Position */
+    position: relative;
+    left: 0;
+    margin-top: 50%;
+}
+
 /* Footer */
 footer {
     background-color: red;
