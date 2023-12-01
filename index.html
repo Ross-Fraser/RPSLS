@@ -24,15 +24,33 @@
 
         <!-- Main Content -->
         <main>
+            <!-- Welcome buttons-->
+            <button id="startGame">Start Game</button>
+            <button id="instruction">Instructions</button>
+            <!-- Scoreboard -->
+            <div id="scoreboard">
+                <div id="player">
+                    <h2>Player</h2>
+                    <p id="playerScore">0</p>
+                </div>
+                <div id="computer">
+                    <h2>Computer</h2>
+                    <p id="computerScore">0</p>
+                </div>
+            <!-- Player buttons-->
             <div id="game">
-                <button id="btnrock" onclick="playerChoice('rock')">Rock</button>
-                <button id="btnpaper" onclick="playerChoice('paper')">Paper</button>
-                <button id="btnscissors" onclick="playerChoice('scissors')">Scissors</button>
-                <button id="btnlizard" onclick="playerChoice('lizard')">Lizard</button>
-                <button id="btnspock" onclick="playerChoice('spock')">Spock</button>
+                <button id="btnrock">Rock</button>
+                <button id="btnpaper">Paper</button>
+                <button id="btnscissors">Scissors</button>
+                <button id="btnlizard">Lizard</button>
+                <button id="btnspock">Spock</button>
             </div>
+            <!-- Results -->
+            <div id="result">
+                <h2>Results</h2>
+                <p id="resultText">Make your choice</p>
         </main>
-    
+
         <!-- Footer -->
         <footer>footer</footer>
     </div>
