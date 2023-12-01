@@ -35,7 +35,27 @@ main {
     color: white;
     /* Main element to take up all the remaining space */
     flex: 1 0 auto;
-}   
+}  
+
+#btnStart {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+
+}
+
+#btnInstructions {
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+    
+}
 
 #scoreboard {
     display: none;
