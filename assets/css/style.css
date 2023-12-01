@@ -37,6 +37,18 @@ main {
     flex: 1 0 auto;
 }   
 
+#scoreboard {
+    display: none;
+}
+
+#game {
+    display: none;
+}
+
+#results {
+    display: none;
+}
+
 /* Buttons */
 button {
     background-color: rgb(185, 223, 255);
