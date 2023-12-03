@@ -84,6 +84,16 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    background-color: rgb(150, 200, 255);
+    transition: background-color 0.3s ease;
+}
+
+#scoreboard, #game, #results {
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
 /* Footer */
 footer {
     background-color: rgb(0, 51, 128);
