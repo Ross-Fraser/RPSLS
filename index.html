@@ -10,23 +10,25 @@
     <!-- Title -->
     <title>RPSLS</title>
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" alt="Apple Touch Icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" alt="32x32 Favicon">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" alt="16x16 Favicon">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <!-- Header -->
-    <header>Rock Paper Scissors Lizard Spock</header>
+    <header>
+        <h2>Rock Paper Scissors Lizard Spock</h2>
+    </header>
 
         <!-- Main Content -->
     <div class="container">
         <main>
             <!-- Welcome buttons-->
-            <button onclick="showGame()"id="btnStart">Start Game</button>
-            <button id="btnInstruction">Instructions</button>
+            <button id="btnStart" onclick="showGame()">Start Game</button>
+            <button id="btnInstructions">Instructions</button>
             <!-- Scoreboard -->
             <div id="scoreboard">
                 <div id="player">
@@ -54,7 +56,11 @@
         </main>
     </div>
         <!-- Footer -->
-        <footer>footer</footer>
+        <footer>
+            <p>footer</p>
+        </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
