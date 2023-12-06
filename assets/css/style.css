@@ -28,7 +28,7 @@ header {
     flex: 1 0 auto;
 }
 
-/* Main */
+/* Main content */
 main {
     background-color: rgb(206, 212, 241);
     text-align: center;
@@ -36,14 +36,14 @@ main {
     /* Main element to take up all the remaining space */
     flex: 1 0 auto;
 }  
-
+/* Welcome screen buttons */
 #btnStart {
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    display: block;
 }
 
 #btnInstructions {
@@ -51,11 +51,11 @@ main {
     position: absolute;
     top: 65%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    display: block;
 }
 
-/* Buttons */
+/* User game buttons */
 button {
     background-color: rgb(185, 223, 255);
     margin: 5%;
@@ -65,7 +65,7 @@ button {
     color: black;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 16px;
     cursor: pointer;
 }
