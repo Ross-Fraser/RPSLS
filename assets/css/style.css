@@ -1,89 +1,117 @@
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* General styles */
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
 header {
-    background-color: rgb(0, 51, 128);
-    padding: 20px;
-    text-align: center;
-    font-size: 20px;
-    color: white;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    /* Take up all available space */
-    flex: 1 0 auto;
+  background-color: rgb(0, 51, 128);
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
 }
 
 /* Main content */
+.container {
+  display: flex;
+  flex-direction: column;
+  /* Take up all available space */
+  flex: 1 0 auto;
+}
+
 main {
-    background-color: rgb(206, 212, 241);
-    text-align: center;
-    color: white;
-    /* Main element to take up all the remaining space */
-    flex: 1 0 auto;
-}  
-/* Welcome screen buttons */
-#btnStart {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
+  background-color: rgb(206, 212, 241);
+  text-align: center;
+  color: white;
+  /* Main element to take up all the remaining space */
+  flex: 1 0 auto;
+}
+/* Screen buttons */
+#btnStartGame {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
 }
 
 #btnInstructions {
-    margin: 0;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
+  margin: 0;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+#btnsPlayerChoice {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* User game buttons */
 button {
-    background-color: rgb(185, 223, 255);
-    margin: 5%;
-    padding: 15px 30px;
-    position: relative;
-    border: auto;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
-    cursor: pointer;
+  background-color: rgb(185, 223, 255);
+  margin: 5%;
+  padding: 10px 20px;
+  position: relative;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: rgb(150, 200, 255);
-    transition: background-color 0.3s ease;
+  background-color: rgb(150, 200, 255);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
-#scoreboard, #game, #results {
-    display: none;
-    transition: opacity 0.5s ease;
+/* Scoreboard */
+#scoreboard {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Results */
+#results {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hide the scoreboard, player buttons and results until the start game button is selected */
+#scoreboard,
+#btnsPlayerChoice,
+#results {
+  display: none;
+  transition: opacity 0.5s ease;
 }
 
 /* Footer */
 footer {
-    background-color: rgb(0, 51, 128);
-    padding: 10px;
-    text-align: center;
-    color: white;
+  background-color: rgb(0, 51, 128);
+  padding: 10px;
+  text-align: center;
+  color: white;
 }
