@@ -1,66 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Meta tags for search engines -->
-    <meta name="description" content="Rock Paper Scissors Lizard Spock">
-    <meta name="keywords" content="Rock Paper Scissors Lizard Spock">
+    <meta name="description" content="Rock Paper Scissors Lizard Spock" />
+    <meta name="keywords" content="Rock Paper Scissors Lizard Spock" />
     <!-- Title -->
     <title>RPSLS</title>
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" alt="Apple Touch Icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" alt="32x32 Favicon">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" alt="16x16 Favicon">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+      alt="Apple Touch Icon"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+      alt="32x32 Favicon"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+      alt="16x16 Favicon"
+    />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Header -->
     <header>
-        <h2>Rock Paper Scissors Lizard Spock</h2>
+      <h2>Rock Paper Scissors Lizard Spock</h2>
     </header>
 
     <!-- Main Content -->
     <div class="container">
-        <main>
-            <!-- Welcome buttons-->
-            <button id="btnStart" onclick="initialiseGame()">Start Game</button>
-            <button id="btnInstructions">Instructions</button>
-            <!-- Scoreboard -->
-            <div id="scoreboard">
-                <div id="player">
-                    <h3>Player</h3>
-                    <p id="playerScore">0</p>
-                </div>
-                <div id="computer">
-                    <h3>Computer</h3>
-                    <p id="computerScore">0</p>
-                </div>
-            </div>
-            <!-- Player buttons-->
-            <div id="btnsPlayerChoice">
-                <button id="btnRock">Rock</button>
-                <button id="btnPaper">Paper</button>
-                <button id="btnScissors">Scissors</button>
-                <button id="btnLizard">Lizard</button>
-                <button id="btnSpock">Spock</button>
-            </div>
-            <!-- Results -->
-            <div id="results">
-                <h3>Results</h3>
-                <p id="resultsText">Make your choice</p>
-            </div>
-        </main>
+      <main>
+        <!-- Welcome buttons-->
+        <nav>
+          <button id="btnStartGame">Start Game</button>
+          <button id="btnInstructions">Instructions</button>
+        </nav>
+        <!-- Scoreboard -->
+        <div id="scoreboard">
+          <div id="player">
+            <h3>Player</h3>
+            <p id="playerScore">0</p>
+          </div>
+          <div id="computer">
+            <h3>Computer</h3>
+            <p id="computerScore">0</p>
+          </div>
+        </div>
+        <!-- Player buttons-->
+        <div id="btnsPlayerChoice">
+          <button id="btnRock">Rock</button>
+          <button id="btnPaper">Paper</button>
+          <button id="btnScissors">Scissors</button>
+          <button id="btnLizard">Lizard</button>
+          <button id="btnSpock">Spock</button>
+        </div>
+        <!-- Results -->
+        <div id="results">
+          <h3>Results</h3>
+          <p id="gameResults">Make your choice</p>
+        </div>
+      </main>
     </div>
-        <!-- Footer -->
-        <footer>
-            <p>footer</p>
-        </footer>
+    <!-- Footer -->
+    <footer>
+      <p>footer</p>
+    </footer>
 
     <script src="assets/js/script.js"></script>
-</body>
-
+  </body>
 </html>
