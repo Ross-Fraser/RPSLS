@@ -23,37 +23,63 @@ header {
 
 /* Main content */
 .container {
+  background-color: rgb(206, 212, 241);
   display: flex;
   flex-direction: column;
   /* Take up all available space */
   flex: 1 0 auto;
 }
 
-main {
-  background-color: rgb(206, 212, 241);
-  text-align: center;
-  color: white;
-  /* Main element to take up all the remaining space */
-  flex: 1 0 auto;
-}
 /* Screen buttons */
 #btnStartGame {
-  margin: 0;
-  position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 25%;
   display: block;
+  position: absolute;
 }
 
 #btnInstructions {
+  top: 65%;
+  left: 25%;
+  display: block;
+  position: absolute;
+}
+
+/* Game instructions */
+#instructions {
+  margin: 10%;
+  top: 20%;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  display: none;
+}
+
+#btnReturnGame {
   margin: 0;
   position: absolute;
-  top: 65%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: block;
+  display: none;
 }
+
+#btnReturnInstructions {
+  margin: 0;
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+ul {
+  margin: 20px;
+  list-style-type: none;
+}
+
 #btnsPlayerChoice {
   margin: 0;
   display: flex;
@@ -64,6 +90,7 @@ main {
 /* User game buttons */
 button {
   background-color: rgb(185, 223, 255);
+  size: px;
   margin: 5%;
   padding: 10px 20px;
   position: relative;
@@ -74,6 +101,16 @@ button {
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.playerChoice {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.playerChoice img {
+  size: 20px;
 }
 
 button:hover {
