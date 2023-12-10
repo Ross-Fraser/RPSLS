@@ -47,6 +47,7 @@
         </nav>
         <!-- Scoreboard -->
         <div id="scoreboard">
+            <h3>Scoreboard</h3>
           <div id="player">
             <h3>Player</h3>
             <p id="playerScore">0</p>
@@ -58,17 +59,18 @@
         </div>
         <!-- Player buttons-->
         <div id="btnsPlayerChoice">
-          <button id="Rock">Rock</button>
-          <button id="Paper">Paper</button>
-          <button id="Scissors">Scissors</button>
-          <button id="Lizard">Lizard</button>
-          <button id="Spock">Spock</button>
+          <button id="rock" class="playerChoice"><img src="assets/images/rock.webp" alt="Hand in a fist" data-choice="rock"/></button>
+          <button id="paper" class="playerChoice"><img src="assets/images/paper.webp" alt="Hand out flat" data-choice="paper"/></button>
+          <button id="scissors" class="playerChoice"><img src="assets/images/scissors.webp" alt="Hand in scissors position" data-choice="scissors"/></button>
+          <button id="lizard" class="playerChoice"><img src="assets/images/lizard.webp" alt="Hand in a puppet position" data-choice="lizard"/></button>
+          <button id="spock" class="playerChoice"><img src="assets/images/spock.webp" alt="Hand in a spock greeting" data-choice="spock"/></button>
         </div>
         <!-- Results -->
         <div id="results">
           <h3>Results</h3>
           <p id="gameResults">Make your choice</p>
         </div>
+        <button id="btnReturnGame">Return</button>
         <!-- Instructions -->
         <div id="instructions">
           <h3>Instructions</h3>
@@ -90,6 +92,7 @@
                 <li>Spock vaporizes Rock</li>
                 <li>Rock crushes Scissors</li>
             </ul>
+            <button id="btnReturnInstructions">Return</button>
       </main>
     </div>
     <!-- Footer -->
