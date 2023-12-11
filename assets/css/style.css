@@ -17,7 +17,7 @@ header {
   background-color: rgb(0, 51, 128);
   padding: 20px;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   color: white;
 }
 
@@ -32,15 +32,15 @@ header {
 
 /* Screen buttons */
 #btnStartGame {
-  top: 50%;
-  left: 25%;
+  top: 40%;
+  left: 30%;
   display: block;
   position: absolute;
 }
 
 #btnInstructions {
   top: 65%;
-  left: 25%;
+  left: 30%;
   display: block;
   position: absolute;
 }
@@ -83,8 +83,9 @@ ul {
 /* User game buttons */
 button {
   background-color: rgb(185, 223, 255);
-  padding: 5px 5px;
-  margin: 2%;
+  padding: 10px 10px;
+  left: 20%;
+  margin: 0%;
   color: black;
   text-align: center;
   text-decoration: none;
@@ -103,11 +104,6 @@ button {
   height: 90%;
 }
 
-#spock {
-  top: 50%;
-  left: 50%;
-}
-
 button:hover {
   background-color: rgb(150, 200, 255);
   transition: background-color 0.3s ease;
@@ -117,20 +113,42 @@ button:hover {
 /* Scoreboard */
 #scoreboard {
   color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: block;
+  text-align: center;
+  /* justify-content: space-around; */
 }
+
+#player {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+
+#computer {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+
+#gamesPlayed {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+
+
 
 /* Results */
 #results {
   color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  text-align: center;
 }
+
+
 
 /* Hide the scoreboard, player buttons and results until the start game button is selected */
 #scoreboard,
