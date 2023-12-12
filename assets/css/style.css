@@ -115,7 +115,6 @@ button:hover {
   color: black;
   display: block;
   text-align: center;
-  /* justify-content: space-around; */
 }
 
 #player {
@@ -164,121 +163,30 @@ footer {
 
 /* Media query: tablets (768px) */
 @media only screen and (min-width: 768px) {
-  .container {
-    flex-direction: row;
-  }
 
   #btnStartGame {
-    top: 40%;
-    left: 30%;
-    display: block;
+  top: 50%;
+  left: 30%;
+  display: block;
   }
 
   #btnInstructions {
-    top: 40%;
-    left: 50%;
-    display: block;
+  top: 50%;
+  left: 55%;
+  display: block;
   }
 
-  #instructions {
-    margin: 10%;
-    top: 20%;
-    color: black;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    display: none;
-  }
-
-  #btnReturnGame {
-    margin: 0;
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-  }
-
-  #btnReturnInstructions {
-    margin: 0;
-    position: absolute;
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-  }
-  /* Game instructions */
-  ul {
-    margin: 20px;
-    list-style-type: none;
-  }
-
-  /* User game buttons */
-  button {
-    background-color: rgb(185, 223, 255);
-    padding: 10px 10px;
-    left: 20%;
-    margin: 0%;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .playerChoice {
-    border: none;
-    background: none;
-    top: 40%;
-    left: 20%;
-  }
-
-  .playerChoice img {
-    width: 90%;
-    height: 90%;
-  }
-
-  button:hover {
-    background-color: rgb(150, 200, 255);
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-
-  /* Scoreboard */
-  #scoreboard {
-    color: black;
-    
-    display: none;
-    text-align: center;
-    justify-content: space-around;
-  }
-
-  #player {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-evenly;
-  }
-
-  #computer {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-evenly;
-  }
-
-  #gamesPlayed {
-    display: flex;
-    flex-direction; row;
+  #btnPlayerChoice {
+  top: 50%;
+  left: 30%;
+  display: block;
   }
 }
 
 /* Media query: laptops (992px) */
 @media only screen and (min-width: 992px) {
   .container {
-    flex-direction: row;
+  flex-direction: row;
   }
 
   #btnStartGame {
@@ -293,66 +201,7 @@ footer {
     display: block;
   }
 
-  #instructions {
-    margin: 10%;
-    top: 20%;
-    color: black;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    display: none;
-  }
-
-  #btnReturnGame {
-    margin: 0;
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-  }
-
-  #btnReturnInstructions {
-    margin: 0;
-    position: absolute;
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-  }
-  /* Game instructions */
-  ul {
-    margin: 20px;
-    list-style-type: none;
-  }
-
-  /* User game buttons */
-  button {
-    background-color: rgb(185, 223, 255);
-    padding: 10px 10px;
-    left: 20%;
-    margin: 0%;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .playerChoice {
-    border: none;
-    background: none;
-    top: 40%;
-    left: 20%;
-  }
-
-  .playerChoice img {
-    width: 90%;
-    height: 90%;
-  }
-
+  
   button:hover {
     background-color: rgb(150, 200, 255);
     transition: background-color 0.3s ease;
