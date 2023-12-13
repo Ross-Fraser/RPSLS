@@ -1,39 +1,94 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock Paper Scissors Lizard Spock Game
 
-Welcome,
+This is a simple implementation of the Rock, Paper, Scissors, Lizard, Spock game using HTML, CSS, and JavaScript. The game allows users to play against the computer, which randomly selects one of the available choices.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Key Objectives
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+### 1. Classic Gameplay
 
-## Codeanywhere Reminders
+The primary goal is to implement the classic Rock, Paper, Scissors game with the addition of Lizard and Spock. Ensure that the core gameplay mechanics are correctly implemented and adhere to the standard rules:
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+- Rock crushes Scissors
+- Scissors cuts Paper
+- Paper covers Rock
+- Rock crushes Lizard
+- Lizard poisons Spock
+- Spock smashes Scissors
+- Scissors decapitates Lizard
+- Lizard eats Paper
+- Paper disproves Spock
+- Spock vaporizes Rock
 
-`python3 -m http.server`
+### 2. Responsive Design
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+Create a responsive and visually appealing user interface that works seamlessly on various devices, including desktops, tablets, and mobile phones. Prioritize a user-friendly experience with clear instructions and intuitive controls.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+### 3. Dynamic Interaction
 
-`http_server`
+Implement JavaScript to handle the dynamic interaction between the user and the computer. Ensure that the game responds promptly to user input, updates the game state accordingly, and displays the results of each round in an engaging manner.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### 4. Stylish UI/UX
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+Design an aesthetically pleasing user interface with appropriate styling using CSS. Utilize animations and visual elements to enhance the gaming experience and make the interface more engaging.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### 5. Code Organization
 
-To log into the Heroku toolbelt CLI:
+Maintain a well-organized codebase with clear separation of concerns. Use separate HTML, CSS, and JavaScript files to enhance readability and ease of maintenance. Comment the code where necessary to provide insights into the implementation details.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### 6. Documentation
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Provide comprehensive documentation to guide users and developers. This includes a detailed `README.md` file explaining how to install, play, and contribute to the project. Include screenshots to showcase the game and its features.
 
----
+### 7. Testing
 
-Happy coding!
+Conduct thorough testing to ensure the reliability and correctness of the game logic. In a `Testing.md` file over various scenarios, including user input validation and edge cases, to deliver a robust and bug-free gaming experience.
+
+## Features
+
+- Classic Rock, Paper, Scissors game extended with Lizard and Spock.
+- Responsive design for an optimal user experience on various devices.
+- JavaScript-driven logic for a dynamic and interactive gaming experience.
+
+# Usage
+
+### Installation
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/Ross-Fraser/RPSLS.git
+   ```
+
+2. Open the `index.html` file in your preferred web browser.
+
+### Playing the Game
+
+1. Open the game in your web browser.
+2. Click on the Start Game button to start the game or click on Instructions to familiarise yourself with the rules before playing.
+3. Click on one of the five buttons to make your move (Rock, Paper, Scissors, Lizard, or Spock).
+4. The computer will randomly select its move.
+5. The winner of the round will be determined based on the game rules.
+6. Enjoy playing and try to beat the computer!
+
+## Examples
+
+Here are a few examples of how to play the game:
+
+1. **Example 1:**
+
+   - Player selects Rock.
+   - Computer randomly selects Scissors.
+   - Player wins the round!
+
+2. **Example 2:**
+
+   - Player selects Paper.
+   - Computer randomly selects Lizard.
+   - Computer wins the round.
+
+3. **Example 3:**
+   - Player selects Spock.
+   - Computer randomly selects Spock.
+   - It's a tie! No one wins this round.
+
+Feel free to experiment with different moves and see how the game unfolds.
