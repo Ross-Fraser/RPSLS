@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]; // Possible moves for the game
   let playerScore = 0; // Keeps track of the players score
   let computerScore = 0; // Keeps track of the computers score
+  let gamesPlayedScore = 0; // Keeps track of the games played
 
   // Hides the start buttons
   function hideStartButtons() {
@@ -58,7 +59,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const computerSelection = computerPlay();
     const results = playRound(playerSelection, computerSelection);
     displayResult(results);
+    gamesPlayedScore++;
     updateScoreboard();
+    // Checks if 3 games have been played
+    if (gamesPlayedScore === 3 && playerScore > computerScore) {
+      showWinnerCelebration();
+      } else if (gamesPlayedScore === 3 && playerScore < computerScore) {
+        showCommiserationMessage();
+      } else if (gamesPlayedScore === 3 && playerScore === computerScore) {
+        showTieMessage();
+      }
   }
 
   // Updates the round results
@@ -71,7 +81,40 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateScoreboard() {
     document.getElementById("playerScore").textContent = playerScore;
     document.getElementById("computerScore").textContent = computerScore;
+    document.getElementById("gamesPlayedScore").textContent = gamesPlayedScore;
   }
+
+  // Reset scores and gamesPlayed
+  function resetGame() {
+    console.log("Resetting game...", gamesPlayedScore); 
+    playerScore = 0;
+    computerScore = 0;
+    gamesPlayedScore = 0;
+    updateScoreboard();
+  }
+
+  // Shows the winner celebration
+  function showWinnerCelebration() {
+    alert("Congratulations, you are the winner!");
+    resetGame();
+  }
+
+  // Shows the commiserations message
+  function showCommiserationMessage() {
+    alert("Sorry, you lost the game!");
+    resetGame();
+  }
+
+  // Shows the tie message
+  function showTieMessage() {
+    alert("It's a tie!");
+    resetGame();
+  }
+
+  // Reset display elements as needed
+  document.getElementById("playerScore").textContent = playerScore;
+  document.getElementById("computerScore").textContent = computerScore;
+
   
   // Shows the instructions
   function showInstructions() {
