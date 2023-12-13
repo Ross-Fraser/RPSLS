@@ -24,6 +24,31 @@ document.addEventListener("DOMContentLoaded", function () {
     btnReturnGame.style.display = "block";
   }
 
+  // Displays the results of the round
+  function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+      return "It's a tie!, get them next time.";
+    } else if (
+      (playerSelection === "Rock" && computerSelection === "Scissors") ||
+      (playerSelection === "Rock" && computerSelection === "Lizard") ||
+      (playerSelection === "Paper" && computerSelection === "Rock") ||
+      (playerSelection === "Paper" && computerSelection === "Spock") ||
+      (playerSelection === "Scissors" && computerSelection === "Paper") ||
+      (playerSelection === "Scissors" && computerSelection === "Lizard") ||
+      (playerSelection === "Lizard" && computerSelection === "Paper") ||
+      (playerSelection === "Lizard" && computerSelection === "Spock") ||
+      (playerSelection === "Spock" && computerSelection === "Rock") ||
+      (playerSelection === "Spock" && computerSelection === "Scissors")
+    ) {
+      playerScore++;
+      return `You win! ${playerSelection} beats ${computerSelection}, you rock, no pun intended :).`;
+    } else {
+      computerScore++;
+      return `You lose! ${computerSelection} beats ${playerSelection}, keep trying.`;
+    }
+  }
+
+
   // Computers choice is randomly selected from the choices
   function computerPlay() {
     return choices[Math.floor(Math.random() * choices.length)];
@@ -34,5 +59,16 @@ document.addEventListener("DOMContentLoaded", function () {
     hideStartButtons();
     showGameContent();
   });
+
+  document.getElementById("rock")
+    .addEventListener("click", () => handleClick("Rock"));
+  document.getElementById("paper")
+    .addEventListener("click", () => handleClick("Paper"));
+  document.getElementById("scissors")
+    .addEventListener("click", () => handleClick("Scissors"));
+  document.getElementById("lizard")
+    .addEventListener("click", () => handleClick("Lizard"));
+  document.getElementById("spock")
+    .addEventListener("click", () => handleClick("Spock"));
 
 });
