@@ -53,6 +53,28 @@ document.addEventListener("DOMContentLoaded", function () {
     return choices[Math.floor(Math.random() * choices.length)];
   }
 
+  // Orchestrates the game
+  function handleClick(playerSelection) {
+    const computerSelection = computerPlay();
+    const results = playRound(playerSelection, computerSelection);
+    displayResult(results);
+    updateScoreboard();
+  }
+
+  // Updates the round results
+  function displayResult(results) {
+    const roundResults = document.getElementById("results");
+    roundResults.textContent = results;
+  }
+  
+  // Updates the scoreboard
+  function updateScoreboard() {
+    document.getElementById("playerScore").textContent = playerScore;
+    document.getElementById("computerScore").textContent = computerScore;
+  }
+
+  
+  
   // Shows the instructions
   function showInstructions() {
     console.log("Showing instructions...");
@@ -91,6 +113,12 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("btnInstructions clicked")
     hideStartButtons();
     showInstructions();
+  });
+
+  document.getElementById("btnReturnInstructions")
+  .addEventListener("click", () => {
+    hideInstructions();
+    showStartButtons();
   });
 
   document.getElementById("rock")
