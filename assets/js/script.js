@@ -48,16 +48,49 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-
   // Computers choice is randomly selected from the choices
   function computerPlay() {
     return choices[Math.floor(Math.random() * choices.length)];
   }
 
+  // Shows the instructions
+  function showInstructions() {
+    console.log("Showing instructions...");
+    const btnInstructions = document.getElementById("btnInstructions");
+    const instructions = document.getElementById("instructions");
+    const btnReturnInstructions = document.getElementById("btnReturnInstructions");
+    btnInstructions.style.display = "none";
+    instructions.style.display = "block";
+    btnReturnInstructions.style.display = "block";
+  }
+
+  // Hides the instructions and returns to the main screen
+  function hideInstructions() {
+    const instructions = document.getElementById("instructions");
+    const btnReturnInstructions = document.getElementById("btnReturnInstructions");
+    instructions.style.display = "none";
+    btnReturnInstructions.style.display = "none";
+  }
+
+  // Shows the start buttons
+  function showStartButtons() {
+    const btnStartGame = document.getElementById("btnStartGame");
+    const btnInstructions = document.getElementById("btnInstructions");
+    btnStartGame.style.display = "block";
+    btnInstructions.style.display = "block";
+  }
+
+
   // Event listeners
   document.getElementById("btnStartGame").addEventListener("click", () => {
     hideStartButtons();
     showGameContent();
+  });
+
+  document.getElementById("btnInstructions").addEventListener("click", () => {
+    console.log("btnInstructions clicked")
+    hideStartButtons();
+    showInstructions();
   });
 
   document.getElementById("rock")
