@@ -25,6 +25,18 @@ document.addEventListener("DOMContentLoaded", function () {
     btnReturnGame.style.display = "block";
   }
 
+  // Hides the game content
+  function hideGameContent() {
+    const btnsPlayerChoice = document.getElementById("btnsPlayerChoice");
+    const scoreboard = document.getElementById("scoreboard");
+    const results = document.getElementById("results");
+    const btnReturnGame = document.getElementById("btnReturnGame");
+    btnsPlayerChoice.style.display = "none";
+    scoreboard.style.display = "none";
+    results.style.display = "none";
+    btnReturnGame.style.display = "none";
+  }
+
   // Displays the results of the round
   function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
@@ -64,11 +76,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Checks if 3 games have been played
     if (gamesPlayedScore === 3 && playerScore > computerScore) {
       showWinnerCelebration();
-      } else if (gamesPlayedScore === 3 && playerScore < computerScore) {
-        showCommiserationMessage();
-      } else if (gamesPlayedScore === 3 && playerScore === computerScore) {
-        showTieMessage();
-      }
+    } else if (gamesPlayedScore === 3 && playerScore < computerScore) {
+      showCommiserationMessage();
+    } else if (gamesPlayedScore === 3 && playerScore === computerScore) {
+      showTieMessage();
+    }
   }
 
   // Updates the round results
@@ -76,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const roundResults = document.getElementById("results");
     roundResults.textContent = results;
   }
-  
+
   // Updates the scoreboard
   function updateScoreboard() {
     document.getElementById("playerScore").textContent = playerScore;
@@ -86,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Reset scores and gamesPlayed
   function resetGame() {
-    console.log("Resetting game...", gamesPlayedScore); 
+    console.log("Resetting game...", gamesPlayedScore);
     playerScore = 0;
     computerScore = 0;
     gamesPlayedScore = 0;
@@ -115,13 +127,14 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("playerScore").textContent = playerScore;
   document.getElementById("computerScore").textContent = computerScore;
 
-  
   // Shows the instructions
   function showInstructions() {
     console.log("Showing instructions...");
     const btnInstructions = document.getElementById("btnInstructions");
     const instructions = document.getElementById("instructions");
-    const btnReturnInstructions = document.getElementById("btnReturnInstructions");
+    const btnReturnInstructions = document.getElementById(
+      "btnReturnInstructions"
+    );
     btnInstructions.style.display = "none";
     instructions.style.display = "block";
     btnReturnInstructions.style.display = "block";
@@ -130,7 +143,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Hides the instructions and returns to the main screen
   function hideInstructions() {
     const instructions = document.getElementById("instructions");
-    const btnReturnInstructions = document.getElementById("btnReturnInstructions");
+    const btnReturnInstructions = document.getElementById(
+      "btnReturnInstructions"
+    );
     instructions.style.display = "none";
     btnReturnInstructions.style.display = "none";
   }
@@ -143,14 +158,14 @@ document.addEventListener("DOMContentLoaded", function () {
     btnInstructions.style.display = "block";
   }
 
-    // Event listeners
+  // Event listeners
   document.getElementById("btnStartGame").addEventListener("click", () => {
     hideStartButtons();
     showGameContent();
   });
 
   document.getElementById("btnInstructions").addEventListener("click", () => {
-    console.log("btnInstructions clicked")
+    console.log("btnInstructions clicked");
     hideStartButtons();
     showInstructions();
   });
@@ -160,21 +175,26 @@ document.addEventListener("DOMContentLoaded", function () {
     showStartButtons();
   });
 
-  document.getElementById("btnReturnInstructions")
-  .addEventListener("click", () => {
-    hideInstructions();
-    showStartButtons();
-  });
+  document
+    .getElementById("btnReturnInstructions")
+    .addEventListener("click", () => {
+      hideInstructions();
+      showStartButtons();
+    });
 
-  document.getElementById("rock")
+  document
+    .getElementById("rock")
     .addEventListener("click", () => handleClick("Rock"));
-  document.getElementById("paper")
+  document
+    .getElementById("paper")
     .addEventListener("click", () => handleClick("Paper"));
-  document.getElementById("scissors")
+  document
+    .getElementById("scissors")
     .addEventListener("click", () => handleClick("Scissors"));
-  document.getElementById("lizard")
+  document
+    .getElementById("lizard")
     .addEventListener("click", () => handleClick("Lizard"));
-  document.getElementById("spock")
+  document
+    .getElementById("spock")
     .addEventListener("click", () => handleClick("Spock"));
-
 });
