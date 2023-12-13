@@ -136,7 +136,8 @@ button:hover {
   flex-direction: row;
   align-items: baseline;
   justify-content: space-evenly;
-} */
+}
+*/
 
 /* Results */
 #results {
@@ -163,44 +164,42 @@ footer {
 
 /* Media query for tablets (768px) */
 @media only screen and (min-width: 768px) {
-
   #btnStartGame {
-  top: 50%;
-  left: 30%;
-  display: block;
+    top: 50%;
+    left: 30%;
+    display: block;
   }
 
   #btnInstructions {
-  top: 50%;
-  left: 55%;
-  display: block;
+    top: 50%;
+    left: 55%;
+    display: block;
   }
 
   #btnPlayerChoice {
-  top: 50%;
-  left: 30%;
-  display: block;
+    top: 50%;
+    left: 30%;
+    display: block;
   }
 }
 
 /* Media query for laptops (992px) */
 @media only screen and (min-width: 992px) {
-
   #btnStartGame {
-  top: 50%;
-  left: 30%;
-  display: block;
+    top: 50%;
+    left: 30%;
+    display: block;
   }
 
   #btnInstructions {
-  top: 50%;
-  left: 55%;
-  display: block;
+    top: 50%;
+    left: 55%;
+    display: block;
   }
 
   #btnPlayerChoice {
-  top: 50%;
-  left: 30%;
-  display: block;
+    top: 50%;
+    left: 30%;
+    display: block;
   }
 }
