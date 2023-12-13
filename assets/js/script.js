@@ -72,8 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("playerScore").textContent = playerScore;
     document.getElementById("computerScore").textContent = computerScore;
   }
-
-  
   
   // Shows the instructions
   function showInstructions() {
@@ -102,8 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btnInstructions.style.display = "block";
   }
 
-
-  // Event listeners
+    // Event listeners
   document.getElementById("btnStartGame").addEventListener("click", () => {
     hideStartButtons();
     showGameContent();
@@ -113,6 +110,11 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("btnInstructions clicked")
     hideStartButtons();
     showInstructions();
+  });
+
+  document.getElementById("btnReturnGame").addEventListener("click", () => {
+    hideGameContent();
+    showStartButtons();
   });
 
   document.getElementById("btnReturnInstructions")
