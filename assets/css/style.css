@@ -136,7 +136,7 @@ button:hover {
   flex-direction: row;
   align-items: baseline;
   justify-content: space-evenly;
-}
+} */
 
 /* Results */
 #results {
@@ -161,7 +161,7 @@ footer {
   color: white;
 }
 
-/* Media query: tablets (768px) */
+/* Media query for tablets (768px) */
 @media only screen and (min-width: 768px) {
 
   #btnStartGame {
@@ -183,51 +183,24 @@ footer {
   }
 }
 
-/* Media query: laptops (992px) */
+/* Media query for laptops (992px) */
 @media only screen and (min-width: 992px) {
-  .container {
-  flex-direction: row;
-  }
 
   #btnStartGame {
-    top: 40%;
-    left: 30%;
-    display: block;
+  top: 50%;
+  left: 30%;
+  display: block;
   }
 
   #btnInstructions {
-    top: 40%;
-    left: 50%;
-    display: block;
+  top: 50%;
+  left: 55%;
+  display: block;
   }
 
-  
-  button:hover {
-    background-color: rgb(150, 200, 255);
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-
-  /* Scoreboard */
-  #scoreboard {
-    color: black;
-    
-    display: none;
-    text-align: center;
-    justify-content: space-around;
-  }
-
-  #player {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-evenly;
-  }
-
-  #computer {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-evenly
+  #btnPlayerChoice {
+  top: 50%;
+  left: 30%;
+  display: block;
   }
 }
