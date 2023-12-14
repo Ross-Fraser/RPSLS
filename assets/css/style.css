@@ -14,7 +14,7 @@ body {
 
 /* Header */
 header {
-  background-color: rgb(0, 51, 128);
+  background-color: rgb(47, 160, 83);
   padding: 20px;
   text-align: center;
   font-size: 15px;
@@ -82,7 +82,7 @@ ul {
 
 /* User game buttons */
 button {
-  background-color: rgb(185, 223, 255);
+  background-color: rgb(171, 185, 252);
   padding: 10px 10px;
   left: 20%;
   margin: 0%;
@@ -97,16 +97,18 @@ button {
 .playerChoice {
   border: none;
   background: none;
+  border-radius: 50%;
 }
 
 .playerChoice img {
   width: 90%;
   height: 90%;
+  border-radius: 50%;
 }
 
 button:hover {
-  background-color: rgb(150, 200, 255);
-  transition: background-color 0.3s ease;
+  background-color: rgb(117, 179, 129);
+  transition: background-color 0.5s ease;
   cursor: pointer;
 }
 
@@ -156,7 +158,7 @@ button:hover {
 
 /* Footer */
 footer {
-  background-color: rgb(0, 51, 128);
+  background-color: rgb(47, 160, 83);
   padding: 10px;
   text-align: center;
   color: white;
