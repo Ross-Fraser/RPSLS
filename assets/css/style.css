@@ -23,7 +23,7 @@ header {
 
 /* Main content */
 .container {
-  background-color: rgb(206, 212, 241);
+  background-color: rgb(185, 242, 234);
   display: flex;
   flex-direction: column;
   /* Take up all available space */
@@ -82,7 +82,7 @@ ul {
 
 /* User game buttons */
 button {
-  background-color: rgb(171, 185, 252);
+  background-color: rgb(90, 218, 203);
   padding: 10px 10px;
   left: 20%;
   margin: 0%;
