@@ -18,7 +18,7 @@ header {
   padding: 20px;
   text-align: center;
   font-size: 15px;
-  color: white;
+  color: black;
 }
 
 /* Main content */
@@ -161,7 +161,7 @@ footer {
   background-color: rgb(47, 160, 83);
   padding: 10px;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 /* Media query for tablets (768px) */
