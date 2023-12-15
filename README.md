@@ -78,6 +78,13 @@ I got inspiration for data-choice attribute from w3schools.com/tags/att_data-.as
 5. The winner of the round will be determined based on the game rules.
 6. Enjoy playing and try to beat the computer!
 
+## Screenshots
+
+![web accessibility test](assets/images/screenshots/accessibility_test.webp)
+![main screen](assets/images/screenshots/main screen.webp)
+![game section](assets/images/screenshots/game.webp)
+![lighthouse_test](assets/images/screenshots/lighthouse_mobile_main_screen.webp)
+
 ## Examples
 
 Here are a few examples of how to play the game:
