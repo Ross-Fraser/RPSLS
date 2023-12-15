@@ -43,6 +43,14 @@ Provide comprehensive documentation to guide users and developers. This includes
 
 Conduct thorough testing to ensure the reliability and correctness of the game logic. In a `Testing.md` file over various scenarios, including user input validation and edge cases, to deliver a robust and bug-free gaming experience.
 
+## Bugs
+
+On clicking the instructions button the instructions and return button are not displayed, i belive it is something to do with the css file but i can't work out what it is.
+
+## Plagiarism
+
+I got inspiration for data-choice attribute from w3schools.com/tags/att_data-.asp
+
 ## Features
 
 - Classic Rock, Paper, Scissors game extended with Lizard and Spock.
