@@ -30,31 +30,32 @@ header {
   flex: 1 0 auto;
 }
 
-/* Screen buttons */
-#btnStartGame {
-  top: 40%;
-  left: 30%;
-  display: block;
-  position: absolute;
-}
-
-#btnInstructions {
-  top: 65%;
-  left: 30%;
-  display: block;
-  position: absolute;
-}
-
 /* Game instructions */
-#instructions {
+#instructionsTHING {
   margin: 10%;
   top: 20%;
+  position: absolute;
   color: black;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
   display: none;
+}
+
+/* Screen buttons */
+#btnStartGame {
+  top: 40%;
+  left: 30%;
+  position: absolute;
+  display: block;
+}
+
+#btnInstructions {
+  top: 65%;
+  left: 30%;
+  position: absolute;
+  display: block;
 }
 
 #btnReturnGame {
@@ -69,7 +70,7 @@ header {
 #btnReturnInstructions {
   margin: 0;
   position: absolute;
-  top: 87%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
@@ -94,6 +95,12 @@ button {
   transition: background-color 0.3s ease;
 }
 
+button:hover {
+  background-color: rgb(117, 179, 129);
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
 .playerChoice {
   border: none;
   background: none;
@@ -106,16 +113,9 @@ button {
   border-radius: 50%;
 }
 
-button:hover {
-  background-color: rgb(117, 179, 129);
-  transition: background-color 0.5s ease;
-  cursor: pointer;
-}
-
-/* Scoreboard */
 #scoreboard {
   color: black;
-  display: block;
+  display: none;
   text-align: center;
 }
 
@@ -133,28 +133,31 @@ button:hover {
   justify-content: space-evenly;
 }
 
-#gamesPlayed {
+#games {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   justify-content: space-evenly;
 }
-*/
 
 /* Results */
 #results {
   color: black;
-  display: block;
+  display: none;
   text-align: center;
 }
 
-/* Hide the scoreboard, player buttons and results until the start game button is selected */
+/* Hide until a button is selected*/
 #scoreboard,
 #btnsPlayerChoice,
-#results {
+#results,
+#btnReturnGame,
+#btnReturnInstructions,
+#instructionsTHING {
   display: none;
   transition: opacity 0.5s ease;
 }
+
 
 /* Footer */
 footer {
