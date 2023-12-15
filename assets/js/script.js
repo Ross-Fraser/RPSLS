@@ -3,34 +3,45 @@ document.addEventListener("DOMContentLoaded", function () {
   const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]; // Possible moves for the game
   let playerScore = 0; // Keeps track of the players score
   let computerScore = 0; // Keeps track of the computers score
-  let gamesPlayedScore = 0; // Keeps track of the games played
+  let gamesPlayed = 0; // Keeps track of the games 
+  
+  const btnStartGame = document.getElementById("btnStartGame");
+  const btnInstructions = document.getElementById("btnInstructions");
+  const instructionsTHING = document.getElementById("instructionsTHING");
+  const btnReturnInstructions = document.getElementById("btnReturnInstructions");
+  const btnsPlayerChoice = document.getElementById("btnsPlayerChoice");
+  const scoreboard = document.getElementById("scoreboard");
+  const results = document.getElementById("results");
+  const btnReturnGame = document.getElementById("btnReturnGame");
+  const roundResults = document.getElementById("results");
+
+  // Reset display elements as needed
+  document.getElementById("playerScore").textContent = playerScore;
+  document.getElementById("computerScore").textContent = computerScore;
 
   // Hides the start buttons
   function hideStartButtons() {
-    const btnStartGame = document.getElementById("btnStartGame");
-    const btnInstructions = document.getElementById("btnInstructions");
     btnStartGame.style.display = "none";
     btnInstructions.style.display = "none";
   }
 
   // Shows the game content
   function showGameContent() {
-    const btnsPlayerChoice = document.getElementById("btnsPlayerChoice");
-    const scoreboard = document.getElementById("scoreboard");
-    const results = document.getElementById("results");
-    const btnReturnGame = document.getElementById("btnReturnGame");
     btnsPlayerChoice.style.display = "block";
     scoreboard.style.display = "block";
     results.style.display = "block";
     btnReturnGame.style.display = "block";
   }
 
+  // Shows the instructions
+  function showInstructions() {
+    console.log("Showing instructions...");
+    instructionsTHING.style.display = "block";
+    btnReturnInstructions.style.display = "block";
+  }
+  
   // Hides the game content
   function hideGameContent() {
-    const btnsPlayerChoice = document.getElementById("btnsPlayerChoice");
-    const scoreboard = document.getElementById("scoreboard");
-    const results = document.getElementById("results");
-    const btnReturnGame = document.getElementById("btnReturnGame");
     btnsPlayerChoice.style.display = "none";
     scoreboard.style.display = "none";
     results.style.display = "none";
@@ -70,22 +81,24 @@ document.addEventListener("DOMContentLoaded", function () {
   function handleClick(playerSelection) {
     const computerSelection = computerPlay();
     const results = playRound(playerSelection, computerSelection);
-    displayResult(results);
-    gamesPlayedScore++;
-    updateScoreboard();
+    
+    
+    
     // Checks if 3 games have been played
-    if (gamesPlayedScore === 3 && playerScore > computerScore) {
+    if (gamesPlayed > 2 && playerScore > computerScore) {
       showWinnerCelebration();
-    } else if (gamesPlayedScore === 3 && playerScore < computerScore) {
+    } else if (gamesPlayed > 2 && playerScore < computerScore) {
       showCommiserationMessage();
-    } else if (gamesPlayedScore === 3 && playerScore === computerScore) {
+    } else if (gamesPlayed > 2 && playerScore === computerScore) {
       showTieMessage();
     }
+    gamesPlayed++;
+    displayResult(results);
+    updateScoreboard();
   }
 
   // Updates the round results
   function displayResult(results) {
-    const roundResults = document.getElementById("results");
     roundResults.textContent = results;
   }
 
@@ -93,16 +106,16 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateScoreboard() {
     document.getElementById("playerScore").textContent = playerScore;
     document.getElementById("computerScore").textContent = computerScore;
-    document.getElementById("gamesPlayedScore").textContent = gamesPlayedScore;
+    document.getElementById("gamesPlayed").textContent = gamesPlayed;
   }
 
   // Reset scores and gamesPlayed
   function resetGame() {
-    console.log("Resetting game...", gamesPlayedScore);
     playerScore = 0;
     computerScore = 0;
-    gamesPlayedScore = 0;
+    gamesPlayed = -1;
     updateScoreboard();
+    displayResult(results);
   }
 
   // Shows the winner celebration
@@ -123,78 +136,45 @@ document.addEventListener("DOMContentLoaded", function () {
     resetGame();
   }
 
-  // Reset display elements as needed
-  document.getElementById("playerScore").textContent = playerScore;
-  document.getElementById("computerScore").textContent = computerScore;
-
-  // Shows the instructions
-  function showInstructions() {
-    console.log("Showing instructions...");
-    const btnInstructions = document.getElementById("btnInstructions");
-    const instructions = document.getElementById("instructions");
-    const btnReturnInstructions = document.getElementById(
-      "btnReturnInstructions"
-    );
-    btnInstructions.style.display = "none";
-    instructions.style.display = "block";
-    btnReturnInstructions.style.display = "block";
-  }
-
   // Hides the instructions and returns to the main screen
   function hideInstructions() {
-    const instructions = document.getElementById("instructions");
-    const btnReturnInstructions = document.getElementById(
-      "btnReturnInstructions"
-    );
-    instructions.style.display = "none";
+    const instructionsTHING = document.getElementById("instructionsTHING");
+    const btnReturnInstructions = document.getElementById("btnReturnInstructions");
+    instructionsTHING.style.display = "none";
     btnReturnInstructions.style.display = "none";
   }
 
   // Shows the start buttons
   function showStartButtons() {
-    const btnStartGame = document.getElementById("btnStartGame");
-    const btnInstructions = document.getElementById("btnInstructions");
     btnStartGame.style.display = "block";
     btnInstructions.style.display = "block";
   }
 
   // Event listeners
-  document.getElementById("btnStartGame").addEventListener("click", () => {
+  btnStartGame.addEventListener("click", () => {
     hideStartButtons();
     showGameContent();
   });
 
-  document.getElementById("btnInstructions").addEventListener("click", () => {
+  btnInstructions.addEventListener("click", () => {
     console.log("btnInstructions clicked");
     hideStartButtons();
     showInstructions();
   });
 
-  document.getElementById("btnReturnGame").addEventListener("click", () => {
+  btnReturnGame.addEventListener("click", () => {
     hideGameContent();
     showStartButtons();
   });
 
-  document
-    .getElementById("btnReturnInstructions")
-    .addEventListener("click", () => {
-      hideInstructions();
-      showStartButtons();
-    });
+  btnReturnInstructions.addEventListener("click", () => {
+    hideInstructions();
+    showStartButtons();
+  });
 
-  document
-    .getElementById("rock")
-    .addEventListener("click", () => handleClick("Rock"));
-  document
-    .getElementById("paper")
-    .addEventListener("click", () => handleClick("Paper"));
-  document
-    .getElementById("scissors")
-    .addEventListener("click", () => handleClick("Scissors"));
-  document
-    .getElementById("lizard")
-    .addEventListener("click", () => handleClick("Lizard"));
-  document
-    .getElementById("spock")
-    .addEventListener("click", () => handleClick("Spock"));
+  document.getElementById("rock").addEventListener("click", () => handleClick("Rock"));
+  document.getElementById("paper").addEventListener("click", () => handleClick("Paper"));
+  document.getElementById("scissors").addEventListener("click", () => handleClick("Scissors"));
+  document.getElementById("lizard").addEventListener("click", () => handleClick("Lizard"));
+  document.getElementById("spock").addEventListener("click", () => handleClick("Spock"));
 });
