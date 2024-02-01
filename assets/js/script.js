@@ -138,8 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Hides the instructions and returns to the main screen
   function hideInstructions() {
-    const instructionsTHING = document.getElementById("instructionsTHING");
-    const btnReturnInstructions = document.getElementById("btnReturnInstructions");
     instructionsTHING.style.display = "none";
     btnReturnInstructions.style.display = "none";
   }
