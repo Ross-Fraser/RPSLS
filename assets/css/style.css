@@ -32,8 +32,7 @@ header {
 
 /* Game instructions */
 #instructionsTHING {
-  margin: 10%;
-  top: 20%;
+  margin: 5%;
   position: absolute;
   color: black;
   justify-content: center;
@@ -43,17 +42,21 @@ header {
   display: none;
 }
 
+#rules {
+  padding-top: 20px
+}
+
 /* Screen buttons */
 #btnStartGame {
   top: 40%;
-  left: 30%;
+  left: 37%;
   position: absolute;
   display: block;
 }
 
 #btnInstructions {
   top: 65%;
-  left: 30%;
+  left: 37%;
   position: absolute;
   display: block;
 }
@@ -61,8 +64,8 @@ header {
 #btnReturnGame {
   margin: 0;
   position: absolute;
-  top: 85%;
-  left: 80%;
+  top: 80%;
+  left: 50%;
   transform: translate(-50%, -50%);
   display: none;
 }
@@ -70,7 +73,7 @@ header {
 #btnReturnInstructions {
   margin: 0;
   position: absolute;
-  top: 90%;
+  top: 82%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
@@ -85,7 +88,6 @@ ul {
 button {
   background-color: rgb(90, 218, 203);
   padding: 10px 10px;
-  left: 20%;
   margin: 0%;
   color: black;
   text-align: center;
