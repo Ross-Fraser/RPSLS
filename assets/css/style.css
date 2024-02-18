@@ -31,7 +31,7 @@ header {
 }
 
 /* Game instructions */
-#instructionsTHING {
+#instructions {
   margin: 5%;
   position: absolute;
   color: black;
@@ -39,7 +39,6 @@ header {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  display: none;
 }
 
 #rules {
@@ -67,7 +66,6 @@ header {
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
 }
 
 #btnReturnInstructions {
@@ -76,7 +74,6 @@ header {
   top: 82%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
 }
 
 ul {
@@ -117,45 +114,33 @@ button:hover {
 
 #scoreboard {
   color: black;
-  display: none;
   text-align: center;
 }
 
-#player {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-evenly;
-}
-
-#computer {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-evenly;
-}
-
+#player,
+#computer,
 #games {
-  display: flex;
-  flex-direction: row;
+  display: inline-block;
   align-items: baseline;
   justify-content: space-evenly;
 }
 
 /* Results */
+#resultsHeading,
 #results {
   color: black;
-  display: none;
+  padding-bottom: 20px;
   text-align: center;
 }
 
 /* Hide until a button is selected*/
 #scoreboard,
 #btnsPlayerChoice,
+#resultsHeading,
 #results,
 #btnReturnGame,
 #btnReturnInstructions,
-#instructionsTHING {
+#instructions {
   display: none;
   transition: opacity 0.5s ease;
 }

@@ -7,11 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
   
   const btnStartGame = document.getElementById("btnStartGame");
   const btnInstructions = document.getElementById("btnInstructions");
-  const instructionsTHING = document.getElementById("instructionsTHING");
+  const instructions = document.getElementById("instructions");
   const btnReturnInstructions = document.getElementById("btnReturnInstructions");
   const btnsPlayerChoice = document.getElementById("btnsPlayerChoice");
   const scoreboard = document.getElementById("scoreboard");
   const results = document.getElementById("results");
+  const resultsHeading = document.getElementById("resultsHeading");
   const btnReturnGame = document.getElementById("btnReturnGame");
   const roundResults = document.getElementById("results");
 
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function showGameContent() {
     btnsPlayerChoice.style.display = "block";
     scoreboard.style.display = "block";
+    resultsHeading.style.display = "block";
     results.style.display = "block";
     btnReturnGame.style.display = "block";
   }
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Shows the instructions
   function showInstructions() {
     console.log("Showing instructions...");
-    instructionsTHING.style.display = "block";
+    instructions.style.display = "block";
     btnReturnInstructions.style.display = "block";
   }
   
@@ -44,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function hideGameContent() {
     btnsPlayerChoice.style.display = "none";
     scoreboard.style.display = "none";
+    resultsHeading.style.display = "none";
     results.style.display = "none";
     btnReturnGame.style.display = "none";
   }
@@ -138,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Hides the instructions and returns to the main screen
   function hideInstructions() {
-    instructionsTHING.style.display = "none";
+    instructions.style.display = "none";
     btnReturnInstructions.style.display = "none";
   }
 
