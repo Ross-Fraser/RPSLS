@@ -1,3 +1,5 @@
+![responsiveDesign](assets/images/responsiveDesign.webp)
+
 # Rock Paper Scissors Lizard Spock Game
 
 This is a simple implementation of the Rock, Paper, Scissors, Lizard, Spock game using HTML, CSS, and JavaScript. The game allows users to play against the computer, which randomly selects one of the available choices.
