@@ -83,21 +83,23 @@ document.addEventListener("DOMContentLoaded", function () {
   // Orchestrates the game
   function handleClick(playerSelection) {
     const computerSelection = computerPlay();
-    const results = playRound(playerSelection, computerSelection);
-    
-    
-    
+    const result = playRound(playerSelection, computerSelection);
+
     // Checks if 3 games have been played
-    if (gamesPlayed > 2 && playerScore > computerScore) {
-      showWinnerCelebration();
-    } else if (gamesPlayed > 2 && playerScore < computerScore) {
-      showCommiserationMessage();
-    } else if (gamesPlayed > 2 && playerScore === computerScore) {
-      showTieMessage();
+    if (gamesPlayed >= 3) {
+      if (playerScore > computerScore) {
+        showCelebrationMessage();
+      } else if (playerScore < computerScore) {
+        showCommiserationMessage();
+      } else {
+        showTieMessage();
+      }
+      resetGame();
+    } else {
+      gamesPlayed++;
+      displayResult(result);
+      updateScoreboard();
     }
-    gamesPlayed++;
-    displayResult(results);
-    updateScoreboard();
   }
 
   // Updates the round results
@@ -116,13 +118,15 @@ document.addEventListener("DOMContentLoaded", function () {
   function resetGame() {
     playerScore = 0;
     computerScore = 0;
-    gamesPlayed = -1;
+    gamesPlayed = 0;
     updateScoreboard();
     displayResult(results);
+    displayResult("Make your choice");
+
   }
 
   // Shows the winner celebration
-  function showWinnerCelebration() {
+  function showCelebrationMessage() {
     alert("Congratulations, you are the winner!");
     resetGame();
   }
