@@ -117,7 +117,7 @@ button#lizard {
 }
 
 button#spock {
-  margin-left: px;
+  margin-left: 10px;
 }
 
 #scoreboard {
@@ -189,6 +189,22 @@ footer {
     left: 30%;
     display: block;
   }
+
+  button#rock {
+    margin-top: 40px;
+    margin-left: 70px;
+  }
+
+  button#lizard,
+  button#spock {
+    margin-left: 0px;
+  }
+
+  #resultsHeading,
+  #gameResults {
+    margin-top: 40px;
+  }
+
 }
 
 /* Media query for laptops (992px) */
