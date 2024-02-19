@@ -130,6 +130,7 @@ h3 {
 }
 
 h2 {
+  padding-top: 10px;
   padding-bottom: 20px;
 }
 
@@ -145,7 +146,7 @@ h2 {
 #resultsHeading,
 #results {
   color: black;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
@@ -182,6 +183,10 @@ footer {
     top: 50%;
     left: 55%;
     display: block;
+  }
+
+  h2 {
+    padding-top: 20px;
   }
 
   #btnPlayerChoice {
@@ -221,9 +226,23 @@ footer {
     display: block;
   }
 
+  h2 {
+    padding-top: 20px;
+  }
+
   #btnPlayerChoice {
     top: 50%;
     left: 30%;
     display: block;
+  }
+
+  button#rock {
+    margin-top: 40px;
+    margin-left: 180px;
+  }
+
+  #resultsHeading,
+  #gameResults {
+    margin-top: 50px;
   }
 }
