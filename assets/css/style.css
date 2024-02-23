@@ -48,14 +48,14 @@ header {
 /* Screen buttons */
 #btnStartGame {
   top: 40%;
-  left: 37%;
+  left: 42%;
   position: absolute;
   display: block;
 }
 
 #btnInstructions {
   top: 65%;
-  left: 37%;
+  left: 42%;
   position: absolute;
   display: block;
 }
@@ -104,20 +104,15 @@ button:hover {
   border: none;
   background: none;
   border-radius: 50%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-left: 10px;
 }
 
 .playerChoice img {
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
   border-radius: 50%;
-}
-
-button#lizard {
-  margin-left: 60px;
-}
-
-button#spock {
-  margin-left: 10px;
 }
 
 #scoreboard {
@@ -195,14 +190,9 @@ footer {
     display: block;
   }
 
-  button#rock {
-    margin-top: 40px;
-    margin-left: 70px;
-  }
-
-  button#lizard,
-  button#spock {
-    margin-left: 0px;
+  .playerChoice {
+    padding-left: 0px;
+    margin-left: 45px;
   }
 
   #resultsHeading,
@@ -236,6 +226,11 @@ footer {
     display: block;
   }
 
+  .playerChoice {
+    margin-left: 30px;
+    padding-left: 0px;
+  }
+
   button#rock {
     margin-top: 40px;
     margin-left: 180px;
@@ -245,4 +240,35 @@ footer {
   #gameResults {
     margin-top: 50px;
   }
+
+  /* Media query for laptops (1200px) */
+@media only screen and (min-width: 1200px) {
+  #btnStartGame {
+    top: 50%;
+    left: 30%;
+    display: block;
+  }
+
+  #btnInstructions {
+    top: 50%;
+    left: 55%;
+    display: block;
+  }
+
+  h2 {
+    padding-top: 20px;
+  }
+
+  #btnPlayerChoice {
+    top: 50%;
+    left: 30%;
+    display: block;
+  }
+
+  .playerChoice {
+    margin-left: 80px;
+    padding-left: 0px;
+  }
+
+}
 }
