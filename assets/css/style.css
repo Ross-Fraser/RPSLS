@@ -271,4 +271,16 @@ footer {
   }
 
 }
-}
+
+  /* Media query for laptops (1400px) */
+  @media only screen and (min-width: 1400px) {
+
+  .playerChoice {
+    margin-left: 160px;
+    padding-left: 0px;
+  }
+
+  #instructions {
+    margin-left: 8%;
+  }
+}}
