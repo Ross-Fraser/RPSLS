@@ -3,9 +3,22 @@
 This document outlines the testing procedures and scenarios for the Rock, Paper, Scissors, Lizard, Spock game.
 
 ## Table of Contents
+
+- [Validation Testing](#validation-testing)
 - [Button Testing](#button-testing)
 - [Option Testing](#option-testing)
 - [Game Logic Testing](#game-logic-testing)
+
+## Validation Testing
+
+- HTML
+    - No errors were found when passing  through the W3C HTML validator.
+
+- CSS
+    - No errors were found when passing  through the W3C (jigsaw) css validator.
+
+- Accessibility
+    - I confirmed that the colors and fonts are easy to read and accessible by running it through lighthouse in devtools as well as wave.webaim.org.
 
 ## Button Testing
 
