@@ -43,8 +43,16 @@ The primary goal is to implement the classic Rock, Paper, Scissors game with the
 ### Screenshots
 
 ![main screen](assets/images/screenshots/main_screen.webp)
+figure 1 - Main Screen
+
+
 ![game screen](assets/images/screenshots/game.webp)
+figure 2 - Game Screen
+
+
 ![instructions screen](assets/images/screenshots/instructions.webp)
+figure 3 - Instructions Screen
+
 
 ### 2. Responsive Design
 
@@ -80,8 +88,16 @@ Please see the TESTING.md file located in the main directory.
 ### Testing Screenshots
 
 ![web accessibility test](assets/images/screenshots/accessibility_test.webp)
+figure 4 - Web accesssibility test
+
+
 ![lighthouse test_mobile](assets/images/screenshots/lighthouse_mobile_main_screen.webp)
+figure 5 - Lighthouse test_mobile
+
+
 ![lighthouse test_desktop](assets/images/screenshots/lighthouse_desktop_main_screen.webp)
+figure 6 - Lighthouse test_desktop
+
 
 ## Bugs
 
